@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="description" content="Updating the DOM">
+    <script src="https://unpkg.com/react@15.4.2/dist/react.js"></script>
+    <script src="https://unpkg.com/react-dom@15.4.2/dist/react-dom.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="minimum-scale=1.0, width=device-width, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="DOM-rendering-moods.css">
+    <title>Updating the DOM</title>
+</head>
+<body>
+<header>
+    <h1>Updating the DOM</h1>
+    <p>Press the Spacebar to change the mood</p>
+</header>
+<section>
+    <h2>jQuery</h2>
+    <div id="target-jquery"></div>
+</section>
+<section>
+    <h2>React</h2>
+    <div id="target-react"></div>
+</section>
+<script src="DOM-rendering-moods.js" type="text/babel"></script>
+<script>
+    /*
+    由於能夠以屬性傳入資料給元件，因此可以分離APP建構UI的資料與邏輯。
+    如此能產生一個比DOM還容易操控的獨立資料集，改變此獨立資料集的任何值也改變了APP的狀態。
+
+    想像APP的所有資料除存在單一JS物件中，每次改變此物件時可將其作為屬性傳給元件並重新繪製UI。
+    意味著 ReactDOM.render 會執行許多工作
+
+    為了讓React在合理的時間內運作， ReactDOM.render 必須有聰明的作法。
+    相較於清空後再重建整個DOM，ReactDOM.render保持目前的DOM且只套用最少量有必要的改變。
+    */
+</script>
+</body>
+</html>
